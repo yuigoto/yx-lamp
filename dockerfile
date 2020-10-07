@@ -1,7 +1,6 @@
 # Dockerfile
 FROM php:7.3-apache
 
-# Meta
 LABEL author="Fabio Y. Goto <lab@yuiti.dev>"
 
 # Activate mod_rewrite
