@@ -75,3 +75,13 @@ RUN docker-php-ext-install bcmath \
   && docker-php-ext-install xmlrpc \ 
   && docker-php-ext-install xsl \ 
   && docker-php-ext-install zip
+
+# Composer
+RUN curl -sS https://getcomposer.org/installer \ 
+  | php -- --install-dir=/usr/local/bin --filename=composer
+
+# Wordpress CLI
+RUN curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar \ 
+  && php wp-cli.phar --info \ 
+  && chmod +x wp-cli.phar \ 
+  && mv wp-cli.phar /usr/local/bin/wp
