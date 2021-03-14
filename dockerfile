@@ -1,5 +1,5 @@
 # Dockerfile
-FROM php:7.3-apache
+FROM php:7.4-apache
 
 LABEL author="Fabio Y. Goto <lab@yuiti.dev>"
 
@@ -33,7 +33,9 @@ RUN apt-get update -y \
     libzzip-dev \ 
     mariadb-server \ 
     nano \ 
-    sendmail
+    sendmail \
+    zip \ 
+    unzip
 
 # Remove lists for IMAP
 RUN rm -r rm -rf /var/lib/apt/lists/* \
