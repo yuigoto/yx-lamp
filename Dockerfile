@@ -64,6 +64,7 @@ RUN docker-php-ext-install bcmath \
   && docker-php-ext-install pcntl \ 
   && docker-php-ext-install pdo_mysql \ 
   && docker-php-ext-install pspell \ 
+  && docker-php-ext-install readline \ 
   && docker-php-ext-install shmop \ 
   && docker-php-ext-install soap \ 
   && docker-php-ext-install sockets \ 
@@ -71,7 +72,6 @@ RUN docker-php-ext-install bcmath \
   && docker-php-ext-install sysvsem \ 
   && docker-php-ext-install sysvshm \ 
   && docker-php-ext-install tidy \ 
-  && docker-php-ext-install wddx \ 
   && docker-php-ext-install xmlrpc \ 
   && docker-php-ext-install xsl \ 
   && docker-php-ext-install zip
